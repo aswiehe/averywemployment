@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Avery S. Wiehe</title>
+    <link rel="icon" type="image/png" href="imgs/briefcase_favicon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom_styling.css" />
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="custom_script.js"></script>
+
+    <!-- Newest jQuery (mainly for AJAX calls) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="inner-container">
+      <section id='nav_section'></section>
+      <!-- Modal -->
+      <div class="modal fade" id="modal_frame">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="modal_title">Title To Be Replaced By Ajax</h5>
+              <button class="close" data-dismiss="modal">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+              <div class="modal-body" id="modal_text">
+                Modal Text To Be Replaced By Ajax
+              </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+      </div>
+      <main style="background:inherit; margin-bottom:100px;">
+        <section style='margin-bottom:5%; background-color:rgb(182, 230, 189); padding: 0px 20px 40px 20px;'>
+          <h1 class='display-4' style='text-align:center;margin-bottom:15px;'>
+            Important Places
+          </h1>
+          <div class='card-deck'>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-muted" style="font-style:oblique;">"What did you learn in your previous jobs?"</h5>
+                <hr>
+                <p class="card-text">Click below to read more about the details of previous roles I've been in and how they've helped me become qualified to work with you today.</p>
+                <a href="employment_history.html" class="btn btn-green" style='position:absolute; bottom:10px;'>Employment History</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-muted" style="font-style:oblique;">"Tell me more about your formal education"</h5>
+                <hr>
+                <p class="card-text">Click below to read more about schools I've attended and the (relevant) classes I've taken.</p>
+                <a href="education.html" class="btn btn-green" style='position:absolute; bottom:10px;'>Education</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-muted" style="font-style:oblique;">"Where can I download your resume as a PDF?"</h5>
+                <hr>
+                <p class="card-text">Click below to be directed to a page where you can preview and download my resume as a PDF. It's a more succinct version of some of the information on this site.</p>
+                <a href="download_online_resume.html" class="btn btn-green" style='position:absolute; bottom:10px;'>Resume Download Page</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style='margin-bottom:5%; background-color:rgb(188, 184, 224); padding: 0px 20px 40px 20px;'>
+          <h1 class='display-4' style='text-align:center;margin-bottom:15px;'>
+            About This Site
+          </h1>
+          <div class='card-deck'>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-muted" style="font-style:oblique;">"What was your process for designing this site"</h5>
+                <hr>
+                <p class="card-text">Click below to read more about my process for designing and testing this sites front-end.</p>
+                <button class="btn btn-purple modal_button" style='position:absolute; bottom:10px;' data-request="frontend" data-toggle="modal" data-target="#modal_frame">Front-End Design</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-muted" style="font-style:oblique;">"How did you put together the backend"</h5>
+                <hr>
+                <p class="card-text">Click below to read more about how I've provisioned this server to be able to serve you the files you see on this site.</p>
+                <button class="btn btn-purple modal_button" style='position:absolute; bottom:10px;' data-request="backend" data-toggle="modal" data-target="#modal_frame">Back-End Configuration</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-muted" style="font-style:oblique;">"Are these files hosted on GitHub?"</h5>
+                <hr>
+                <p class="card-text">While I mostly use GitHub for web applications focused on PHP, if you click below, you will be redirected to a repository I created just for this site.</p>
+                  <a href="download_online_resume.html" class="btn btn-purple" style='position:absolute; bottom:10px;'>Resume Download Page</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style='DISPLAY:NONE;margin-bottom:5%; background-color:rgb(245, 198, 198); padding: 0px 20px 40px 20px;'>
+          <h1 class='display-3' style='text-align:center;margin-bottom:15px;'>
+            Site Back-End
+          </h1>
+          <div class='card-deck'>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-muted" style="font-style:oblique;">"What kind of stack is on the back-end?"</h5>
+                <hr>
+                <p class="card-text">Click below to read more about what kind of technologies this site is using on the back-end.</p>
+                <button class="btn btn-red" style='position:absolute; bottom:10px;' data-toggle="modal" data-target="#modal_frame">Stack Description</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-muted" style="font-style:oblique;">"Tell me about how this site is hosted"</h5>
+                <hr>
+                <p class="card-text">Click below to read more about how I'm serving this site to you right now.</p>
+                <button class="btn btn-red" style='position:absolute; bottom:10px;' data-toggle="modal" data-target="#modal_frame">Web Hosting</a>
+              </div>
+            </div>
+            <div class="card" style="width:18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-muted" style="font-style:oblique;">"Can I see how you configured your server?"</h5>
+                <hr>
+                <p class="card-text">Click below to (maybe) see how I configured this server. This feature may still be under development.</p>
+                <button disabled class="btn btn-red" style='position:absolute; bottom:10px; text-decoration:line-through;' data-toggle="modal" data-target="#modal_frame" data-toggle="modal" data-target="#modal_frame">Server Configuration</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
