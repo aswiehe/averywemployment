@@ -5,7 +5,7 @@ body, html {
     /* height: 100%; */
     background-color: #ffffff;
     /* The image used */
-    background-image: url("./imgs/city.jpg");
+    background-image: url("./imgs/city_blur.jpg");
 
     min-height: 1080px;
     
